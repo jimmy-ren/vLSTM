@@ -23,3 +23,9 @@ Once the data is ready, you may run `lstm_writer_train.m` under `applications/wr
 
 ## More applications using multimodal LSTM
 TBA
+
+
+## Citations
+Jimmy SJ. Ren, Yongtao Hu, Yu-Wing Tai, Chuan Wang, Li Xu, Wenxiu Sun, Qiong Yan, 
+"[Look, Listen and Learn - A Multimodal LSTM for Speaker Identification](http://www.jimmyren.com/papers/AAAI16_Ren.pdf)", The 30th AAAI Conference on Artificial Intelligence (AAAI-16). <br>
+
