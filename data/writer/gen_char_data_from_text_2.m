@@ -12,7 +12,7 @@ addpath data/
 %     fprintf('%d\n', lc);
 % end
 % fclose(fid);
-load('data/writing/all_text.mat');
+load('data/writer/all_text.mat');
 
 % use ascii code 32 to 126, 95 chars in all
 seq_len = 50;
@@ -51,7 +51,7 @@ while(1)
     
     % save
     fprintf('saving %d file.\n', fnum);
-    save(strcat('data/writing/graham/seq_', num2str(fnum), '.mat'), '-v7.3', 'sample_seq', 'label_seq');
+    save(strcat('data/writer/graham/seq_', num2str(fnum), '.mat'), '-v7.3', 'sample_seq', 'label_seq');
     fnum = fnum + 1;
     sample_seq = zeros(95, seq_len, seq_num);
     label_seq = zeros(95, seq_len, seq_num);
