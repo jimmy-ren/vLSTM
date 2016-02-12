@@ -19,7 +19,7 @@ Open the `applications/writer` folder but don't enter it. Run `lstm_writer_test.
 ### Data generation and training
 Paul Graham's [essay](http://www.paulgraham.com/articles.html) is used in this sample. All text is stored in `data/writer/all_text.mat` as a string. You may load it manually and see the content. The whole text contains about 2 million characters. To generate the training data, please run `data/writer/gen_char_data_from_text_2.m`. It will generate four .mat files under `data/writer/graham`, each file contains 10000 character sequences of length 50, so the four files adds upto 2 million characters.<br>
 
-Once the data is ready, you may run `lstm_writer_train.m` under `applications/writer` to start the training.
+Once the data is ready, you may run `lstm_writer_train.m` under `applications/writer` to start the training. During training, intermediate models will be saved under `results/writer`. You may launch another Matlab and run `lstm_writer_test.m` with the newly saved model instead of `writer.mat` to test it.
 
 ## More applications using multimodal LSTM
 TBA
