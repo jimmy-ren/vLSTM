@@ -1,3 +1,5 @@
+addpath core/
+addpath optimization/
 addpath utils/
 addpath results/writer/
 clearvars -global config;
@@ -9,3 +11,4 @@ config = model;
 lstm_init_v52();
 config.weights = model.weights;
 lstm_writer_val();
+
