@@ -43,8 +43,8 @@ function lstm_core_v52(in, label, previous_cell_acts, previous_cell_state)
         mem.net_out(:,:,1:batch_size,s) = permute(softmax(pagefun(@mtimes, repmat(config.weights.Wy, [1 1 size(in,2)]), mem.cell_acts{config.hidden_layer_num}{s}(:,1:batch_size,:)), config.temperature), [1 3 2]);
     end   
         
-    % if label is -1, indicates it's test time
-    if(label == -1)
+    % if numel(label) == 1, indicates it's test time
+    if(numel(label) == 1)
         return;
     end
     
