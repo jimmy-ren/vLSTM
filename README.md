@@ -21,9 +21,23 @@ Paul Graham's [essay](http://www.paulgraham.com/articles.html) is used in this s
 
 Once the data is ready, you may run `lstm_writer_train.m` under `applications/writer` to start the training. During training, intermediate models will be saved under `results/writer`. You may launch another Matlab and run `lstm_writer_test.m` with the newly saved model instead of `writer.mat` to test it.
 
-## More applications using multimodal LSTM
-TBA
+## Multimodal LSTM for speaker naming
+The training procedure of the Multimodal speaker naming LSTM as well as the pre-processed data (the one you can use off-the-shelf) has been releaseed. Please follow the instruction below to perform the training.
+### Download data
+Please go [here](https://drive.google.com/folderview?id=0B6nl_KFEGWG0QWVJakhRcEUyVDQ&usp=sharing) or [here](http://pan.baidu.com/s/1kV6KbOF) to download all the pre-processed training data and put all the files under `data/speaker-naming/processed_training_data/`, following the existing folder structure inside. <br>
 
+In addition, please go [here](https://drive.google.com/folderview?id=0B6nl_KFEGWG0NkdYcEduc2twQW8&usp=sharing) or [here](http://pan.baidu.com/s/1bpymRHd) to download the pre-processed multimodal validation data and put all the files under `data/speaker-naming/raw_full/`, following the existing folder structure inside. <br>
+### Start training
+Once all the data is in place, you may start to train 3 types of models, namly the model only classifies the face features, the model only classifies the audio features and the model simultaneously classifies the face+audio multimodal features (multimodal LSTM). <br>
+
+To train the face only model, you may run this [script](https://github.com/jimmy-ren/vLSTM/blob/master/applications/speaker-naming/face_only/sn_face_train.m). <br>
+To train the audio only model, you may run this [script](https://github.com/jimmy-ren/vLSTM/blob/master/applications/speaker-naming/audio_only/sn_audio_train.m). <br>
+To train the face+audio multimodal LSTM model, you may run this [script](https://github.com/jimmy-ren/vLSTM/blob/master/applications/speaker-naming/face_audio/sn_FA_5c_train_v52.m). <br>
+
+Meanwhile, you can also run tests for the aforementioned three models by using the pre-train models. <br>
+This [script](https://github.com/jimmy-ren/vLSTM/blob/master/applications/speaker-naming/face_only/test_face_all.m) for testing the pre-train face only model. <br>
+This [script](https://github.com/jimmy-ren/vLSTM/blob/master/applications/speaker-naming/audio_only/test_audio_all.m) for testing the pre-train audio only model. <br>
+This [script](https://github.com/jimmy-ren/vLSTM/blob/master/applications/speaker-naming/face_audio/test_FA_all_v52.m) for testing the pre-train face-audio multimodal LSTM model. <br>
 
 ## Citations
 Jimmy SJ. Ren, Yongtao Hu, Yu-Wing Tai, Chuan Wang, Li Xu, Wenxiu Sun, Qiong Yan, 
