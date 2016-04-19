@@ -17,6 +17,6 @@ function sn_FA_configure()
     config.learning_rate = 0.1;
     config.temperature = 1;
     config.decay = 5e-7 / 10;
-    config.weight_decay = [0.001 0.0001];
+    config.weight_decay = [0.002 0.0002];
 end
 
